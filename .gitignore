@@ -1,0 +1,7 @@
+
+#this project
+data/
+log/
+saved/
+*.log
+*.ipynb
