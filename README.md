@@ -1,14 +1,19 @@
-# TransNuSeg: A Lightweight Multi-Task Transformer for Nuclei Segmentation
+# EffiNuSeg: Extended TransNuSeg: A Lightweight Multi-Task Transformer for Nuclei Segmentation
 
-This is the official implementation for **TransNuSeg: A Lightweight Multi-Task Transformer for Nuclei Segmentation** (MICCAI 2023). [paper](https://arxiv.org/pdf/2307.08051.pdf)
+This is the extended version of official implementation for **TransNuSeg: A Lightweight Multi-Task Transformer for Nuclei Segmentation** (MICCAI 2023). [paper](https://arxiv.org/pdf/2307.08051.pdf)
 
 ## Introduction
-This paper proposes a lightweight multi-task framework for nuclei segmentation, namely TransNuSeg, as the first attempt at an entirely Swin-Transformer driven architecture.  Innovatively, to alleviate the prediction inconsistency between branches, we propose a self-distillation loss that regulates the consistency between the nuclei decoder and normal edge decoder. And an innovative attention-sharing scheme that shares attention heads amongst all decoders is employed to leverage the high correlation between tasks.
+TransNuSeg paper proposes a lightweight multi-task framework for nuclei segmentation, as the first attempt at an entirely Swin-Transformer driven architecture.  Innovatively, to alleviate the prediction inconsistency between branches, we propose a self-distillation loss that regulates the consistency between the nuclei decoder and normal edge decoder. And an innovative attention-sharing scheme that shares attention heads amongst all decoders is employed to leverage the high correlation between tasks.
 
-The overall architecture is demonstrated in the figure below. 
+As an extention following modifications are proposed.
+* A boundary refinement block integrated at the end of the nuclei segmentation decoder branch.
+* A boundary refinement loss function to improve the segmentation.
+* A spatial attention mechanism to enhance self-attention capabilities in the decoder branch.
+
+The extended architecture is demonstrated in the figure below. 
 
 <p align="center">
-  <img src="./model.jpg" />
+  <img src="./model.png" />
 </p>
 
 ## Dataset
